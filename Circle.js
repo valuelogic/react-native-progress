@@ -130,6 +130,9 @@ export class ProgressCircle extends Component {
                     : '0deg',
               },
             ],
+            shadowOffset:{  width: 0,  height: 0,  },
+            shadowColor: 'white',
+            shadowOpacity: 0.3,
           }}
         >
           {unfilledColor && progressValue !== 1 ? (
@@ -168,7 +171,7 @@ export class ProgressCircle extends Component {
               endAngle={(indeterminate ? endAngle * 2 : 2) * Math.PI}
               stroke={borderColor || color}
               strokeCap={strokeCap}
-              strokeWidth={border}
+              strokeWidth={thickness}
             />
           ) : (
             false
